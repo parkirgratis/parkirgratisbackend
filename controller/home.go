@@ -5,17 +5,18 @@ import (
 
 	"github.com/gocroot/helper"
 	"github.com/gocroot/model"
+	
 )
 
 func GetHome(respw http.ResponseWriter, req *http.Request) {
-	var resp model.Response
-	resp.Response = helper.GetIPaddress()
-	helper.WriteJSON(respw, http.StatusOK, resp)
+	var park model.Response
+	park.Response = helper.GetIPaddress()
+	helper.WriteJSON(respw, http.StatusOK, park)
 }
 
 
 func NotFound(respw http.ResponseWriter, req *http.Request) {
-	var resp model.Response
-	resp.Response = "Not Found"
-	helper.WriteJSON(respw, http.StatusNotFound, resp)
+	var park model.Response
+	park.Response = "Not Found"
+	helper.WriteJSON(respw, http.StatusNotFound, park)
 }
