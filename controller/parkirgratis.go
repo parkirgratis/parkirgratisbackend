@@ -16,4 +16,4 @@ func Getparkirgratis(respw http.ResponseWriter, req *http.Request) {
 	park:=atdb.GetAllDoc[[]model .parkirgratis](config.Mongoconn,"tempat",bson.M{})
 	park.Response = "Not Found"
 	helper.WriteJSON(respw, http.StatusOk, park)
-}
+} 
