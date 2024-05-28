@@ -68,6 +68,7 @@ To get an auth in Google Cloud, you can do the following:
    # Authorize service account to deploy cloud function
    gcloud projects add-iam-policy-binding ${PROJECT_ID} --member=serviceAccount:whatsauth@${PROJECT_ID}.iam.gserviceaccount.com --role=roles/cloudfunctions.developer
    gcloud projects add-iam-policy-binding ${PROJECT_ID} --member=serviceAccount:whatsauth@${PROJECT_ID}.iam.gserviceaccount.com --role=roles/logging.viewer
+   gcloud iam service-accounts add-iam-policy-binding projects/-/serviceAccounts/428928800080-compute@developer.gserviceaccount.com --member serviceAccount:parkirgratis@fit-union-424704-a6.iam.gserviceaccount.com --role roles/iam.serviceAccountUser
    ```
 
 3. Open Menu Cloud Build>settings, select the Service Account created by step 1, and enable Cloud Function Developer.  
